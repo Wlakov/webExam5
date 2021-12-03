@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mainDiv=document.createElement('div')
+    mainDiv.style.border='solid';
+    mainDiv.style.width='500px';
+    mainDiv.style.height='200px'
+    document.body.appendChild(mainDiv);
+
+    let vved=document.createElement('p');
+    vved.innerHTML='Enter your info:'
+    mainDiv.appendChild(vved);
+
+
+    let childDiv1=document.createElement('div');
+    mainDiv.appendChild(childDiv1);
+    let pName=document.createElement('p');
+    let inputN=document.createElement('input');
+    inputN.setAttribute('type','text');
+    inputN.setAttribute('placeholder','name');
+    inputN.setAttribute('id','name');
+    childDiv1.appendChild(pName);
+    pName.appendChild(inputN);
+
+    let childDiv2=document.createElement('div');
+    mainDiv.appendChild(childDiv2);
+    let pAge=document.createElement('p');
+    let inputA=document.createElement('input');
+    inputA.setAttribute('type','text');
+    inputA.setAttribute('placeholder','age');
+    inputA.setAttribute('id','age');
+    childDiv2.appendChild(pAge);
+    pAge.appendChild(inputA);
+
+    let but=document.createElement('button');
+    but.setAttribute('id','but')
+    but.innerHTML='Start';
+    mainDiv.appendChild(but);
+
+    document.getElementById('but').addEventListener('click',function (){
+        let ni=document.getElementById('name').value
+        let ai=document.getElementById('age').value
+        alert(`Your name: ${ni}\nAge: ${ai}`);
+    })
+
+
+</script>
+</body>
+</html>
